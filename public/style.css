@@ -3,10 +3,22 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 body {
-	margin: 0;
-	padding:0;
+	margin:  0;
+	padding: 0;
 	font-size: 12px;
 	font-family: tahoma;
+}
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+ 
+.clear:after {
+  clear: both;
+}
+.clear {
+  *zoom: 1;
 }
 .kellum {
 	text-indent: 100%;
@@ -63,10 +75,50 @@ header nav ul li a.active {
 }
 
 #main {
-	max-height: 480px;
+	min-height:480px;
 }
 #main img {
 	width: 100%;
+}
+#main div.gallery,
+#main div.news,
+#main div.bio {
+	border-top: 1px #ccc solid;
+	margin-top: 1em;
+	padding-top: 0.8em;
+}
+#main div.news {
+	text-align: right;
+}
+#main div.news p {
+	margin-left: 300px;
+}
+#main div.gallery h2,
+#main div.bio h2 {
+	float: left;
+	width: 300px;
+	color: #999;
+	font-weight: normal;
+}
+#main div.gallery iframe,
+#main div.bio table {
+	float: right;
+	width: 640px;
+	height: 360px;
+	margin: 1em 10px;
+}
+#main ul.gallery {
+	margin-left: 300px;
+}
+#main ul.gallery li {
+	float: left;
+	width:30%;
+	height: 180px;
+	overflow: hidden;
+	margin: 1.5%;
+}
+#main ul.gallery li img {
+	width:100%;
 }
 
 footer {

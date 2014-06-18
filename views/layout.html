@@ -4,6 +4,11 @@
 	<meta charset="utf-8">
 	<title>Nick Prince - {{title}}</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	{{#if photos_active}}
+	<link rel="stylesheet" href="jquery.fancybox.css" type="text/css" media="screen">
+	<script src="jquery.fancybox.js"></script>
+	{{/if}}
   	<script src="script.js"></script>
 </head>
 
@@ -19,16 +24,16 @@
 						
 			<nav>
 				<ul class="unstyled inline">
-					<li><a href="/bio">Bio</a></li>
-					<li><a href="/photos">Photos</a></li>
-					<li><a href="/videos">Videos</a></li>
-					<li><a href="/news">News</a></li>
+					<li><a href="/bio" class="{{#if bio_active}}active{{/if}}">Bio</a></li>
+					<li><a href="/photos" class="{{#if photos_active}}active{{/if}}">Photos</a></li>
+					<li><a href="/videos" class="{{#if videos_active}}active{{/if}}">Videos</a></li>
+					<li><a href="/news" class="{{#if news_active}}active{{/if}}">News</a></li>
 				</ul>
 			</nav>
 
 		</header>
 
-		<div id="main">
+		<div id="main" class="clear">
 			{{{body}}}
 		</div>
 

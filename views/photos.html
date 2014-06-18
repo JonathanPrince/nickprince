@@ -1,5 +1,26 @@
-<ul class="unstyled">
-{{#each photos}}
-	<li><img src="/photo/{{this}}" class="gallery"></li>
-{{/each}}
-</ul>
+<div class="gallery">
+	<h2>The Genius of Dave Richards</h2>
+	<ul class="unstyled gallery clear">
+	{{#each data.dave}}
+		<li><a href="/photo/{{this}}.jpg" class="fancybox" rel="gallery1"><img src="/photo/{{this}}.jpg"></a></li>
+	{{/each}}
+	</ul>
+</div>
+
+<div class="gallery">
+	<h2>On Set</h2>
+	<ul class="unstyled gallery clear">
+	{{#each data.onset}}
+		<li><a href="/photo/{{this}}.jpg" class="fancybox" rel="gallery2"><img src="/photo/{{this}}.jpg"></a></li>
+	{{/each}}
+	</ul>
+</div>
+
+<div class="gallery">
+	<h2>Production</h2>
+	<ul class="unstyled gallery clear">
+	{{#each data.prod}}
+		<li><a href="/photo/{{this}}.jpg" class="fancybox" rel="gallery3"><img src="/photo/{{this}}.jpg"></a></li>
+	{{/each}}
+	</ul>
+</div>
