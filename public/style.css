@@ -1,0 +1,100 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+body {
+	margin: 0;
+	padding:0;
+	font-size: 12px;
+	font-family: tahoma;
+}
+.kellum {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+}
+ul.unstyled {
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+ul.unstyled.inline li {
+	display: inline;
+}
+#wrapper {
+	width:  960px;
+	margin: 0 auto;
+}
+header {
+	height: 120px;
+}
+header #title {
+	float: left;
+	width: 355px;
+	height:100px;
+}
+header #title a {
+	display: block;
+}
+header #title a h1 {
+	height: 79px;
+	background: url('/img/header-title.png') no-repeat;
+}
+header nav {
+	margin-left: 355px;
+	padding-top: 60px;
+}
+header nav ul {
+	text-align: right;
+}
+header nav ul li a {
+	display: inline-block;
+	width: 125px;
+	text-align: center;
+	font-size: 2.3em;
+	line-height: 1.75em;
+	color: #357ce0;
+}
+header nav ul li a.active {
+	border-bottom: 3px #357ce0 solid;
+}
+
+#main {
+	max-height: 480px;
+}
+#main img {
+	width: 100%;
+}
+
+footer {
+	background: url('/img/bg-footer.png') repeat-y;
+}
+footer ul {
+	height:64px;
+	text-align: right;
+}
+footer ul li a {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin: 11px;
+	background: url('/img/footer-logos.png') no-repeat;
+}
+footer ul li a:hover {
+	background-position-y: -40px; 
+}
+footer ul li a.imdb {
+	width: 82px;
+}
+footer ul li a.youtube {
+	background-position-x: -122px; 
+}
+footer ul li a.facebook {
+	background-position-x: -202px; 
+}
+footer ul li a.twitter {
+	background-position-x: -162px; 
+}
